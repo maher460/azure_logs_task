@@ -163,3 +163,4 @@ cython_debug/
 
 parquet_data/
 parquet_data_concurrent/
+app_logs/
