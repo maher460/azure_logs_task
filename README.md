@@ -85,4 +85,33 @@ Use Jupyter Notebook to work with the stored data.
 
 Use `process_data.ipynb` to work with the stored data. Note that this is still a work in progress and currently very limited.
 
+## Parquet File Processor `process_data.py`
+
+This script processes Parquet files located in specified directories, flattens nested JSON structures, and combines the data into a single DataFrame. It also saves the processed data in both CSV and Parquet formats.
+
+### Features
+
+- Recursively finds Parquet files in a directory
+- Validates date formats for filtering
+- Flattens nested JSON columns
+- Combines and saves processed data
+
+### Run the Script
+
+Execute the script using Python:
+
+```
+python script.py --start_date YYYYMMDD --end_date YYYYMMDD
+```
+
+If you do not specify `--start_date` or `--end_date`, the default values will be used.
+
+Example:
+
+```
+python script.py --start_date 20240601 --end_date 20240801
+```
+
+This command will process Parquet files in the specified directories, flatten nested JSON columns, and save the combined data to `combined_table.csv` and `combined_table.parquet`.
+
 ---
